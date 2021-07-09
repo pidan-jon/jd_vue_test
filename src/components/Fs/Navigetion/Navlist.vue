@@ -13,9 +13,9 @@
             customer:this.IsCSbox==true
             }">
         <div class="itembox" ref="itembox" >
-            <div v-for="(item,i) in Navlistdata" :key="i" class="itemchlid">
+            <div v-for="(item,i) in NavlistData" :key="i" class="itemchlid">
                 <p class="item-tit">{{item.title}}</p>
-                    <a v-for="(val,name,k) in Navlistdata[i].menuitem" :key="k" :href="val">
+                    <a v-for="(val,name,k) in NavlistData[i].menuitem" :key="k" :href="val">
                     {{name}}
                     </a>
             </div>
@@ -36,16 +36,12 @@ export default {
                 type: String,
                 default: "",
             },
+            NavlistData:{
+                type: Array,
+                default: "",
+            }
         },
         computed: {
-            Navlistdata: { 
-                get() {
-                    return this.$store.state.Navlistdata
-                    },
-                set(newValue) {
-                        this.$store.state.Navlistdata = newValue
-                    }
-            }
         },
         methods:{
             boxShow(){
@@ -145,6 +141,8 @@ export default {
                 justify-content:center;
                 border-left: 1px solid #ccc;
                 .itemchlid{
+                    border-left: 1px solid #ccc;
+                    padding-left: 20px;
                     width: 255px;
                     &:first-child{
                         width: 340px;
@@ -163,6 +161,8 @@ export default {
                 display: flex;
                 justify-content:center;
                 .itemchlid{
+                    border-left: 1px solid #ccc;
+                    padding-left: 20px;
                     width: 200px;
                     &:first-child{
                         width: 300px;

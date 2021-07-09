@@ -8,14 +8,21 @@
               <ul>
                   <li><PhoneJD></PhoneJD></li>
                   <li class="spacer"></li>
-                  <li><SiteMap :mainWidth="this.mainWidth"></SiteMap></li>
+                  <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[1].navtagName"
+                  :NavlistData="gatSMBoxdata"></Navlist></li>
                   <li class="spacer"></li>
-                  <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[0].navtagName"></Navlist></li>
-                  <li>
+                  <!-- <li><SiteMap :mainWidth="this.mainWidth"></SiteMap></li> -->
+                  <!-- <li class="spacer"></li> -->
+                  <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[0].navtagName"
+                  :NavlistData="gatCSBoxdata"
+                  ></Navlist></li>
+                  
+
+                  <!-- <li>
                       <p>
                           {{$store.state.textname}}
                       </p>
-                  </li>
+                  </li> -->
               </ul>
           </div>
       </div>
@@ -49,6 +56,9 @@ export default {
         tagNamelist:[
             {
                 navtagName:"客户服务"
+            },
+            {
+                navtagName:"网站导航"
             }
         ]
       }
@@ -73,6 +83,22 @@ export default {
             return {
                 '--mainwidth': this.mainWidth+'px'
             }
+        },
+        gatCSBoxdata: { 
+            get() {
+                return this.$store.state.CSboxdata
+                },
+            set(newValue) {
+                 this.$store.state.CSboxdata = newValue
+                 }
+        },
+        gatSMBoxdata: { 
+            get() {
+                return this.$store.state.SMboxdata
+                },
+            set(newValue) {
+                 this.$store.state.SMboxdata = newValue
+                 }
         }
     },
     watch: {
