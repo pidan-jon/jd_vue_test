@@ -1,12 +1,14 @@
 <template>
   <div class="SiteMapRoot">
-    <p ref="SiteMapJDboxtag" class="SiteMapJDboxtag" @mouseover="boxShow" @mouseleave="boxnotShow">网站导航</p>
-    <div class="SiteMapJDbox" ref="SiteMapJDbox" :style="styleVar" @mouseover="boxShow" @mouseleave="boxnotShow">
-        <div class="itembox" :class="{bigscreen:this.mainWidth==1190,smallscreen:this.mainWidth==990}">
+    <p ref="SiteMapJDboxtag" class="SiteMapJDboxtag" 
+        @mouseover="boxShow" @mouseleave="boxnotShow">网站导航</p>
+    <div class="SiteMapJDbox" ref="SiteMapJDbox" :style="styleVar" 
+        @mouseover="boxShow" @mouseleave="boxnotShow">
+        <div class="itembox" 
+            :class="{bigscreen:this.mainWidth==1190,smallscreen:this.mainWidth==990}">
             <div v-for="(item,i) in siteMapdata" :key="i" class="itemchlid">
                 <p class="item-tit">{{item.title}}</p>
-                    <a v-for="(val,name,k) in siteMapdata[i].menuitem" :key="k"
-                    :href="val">
+                    <a v-for="(val,name,k) in siteMapdata[i].menuitem" :key="k" :href="val">
                     {{name}}
                     </a>
             </div>
@@ -121,9 +123,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  :root {
-    --siteWidth: 1190px;
-  }
+//   :root {
+//     --siteWidth: 1190px;
+//   }
     .SiteMapRoot{
         position: relative;
         .SiteMapJDboxtag{
@@ -131,7 +133,7 @@ export default {
             position: relative;
             line-height: 28px;
             border: 1px solid #e3e4e5;
-            z-index: 1;
+            z-index: 2;
             padding: 0 20px 0 7px;
             &:hover{
                 padding-bottom: 2px;
@@ -143,13 +145,14 @@ export default {
         .SiteMapJDbox{
             display: none;
             position: absolute;
-            width: var(--siteWidth,1190px);
-            min-width: 990px;
+            // width: var(--siteWidth,1190px);
+            // min-width: 990px;
             right: -75px;
             background: #fff;
             border: 1px solid #ccc;
             padding: 10px 0;
             top: 30px;
+            z-index: 1;
             .itembox{
                 display: flex;
                 justify-content:center;

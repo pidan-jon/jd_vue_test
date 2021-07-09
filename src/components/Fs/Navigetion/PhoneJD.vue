@@ -146,6 +146,16 @@ export default {
                     }
                 }
             }
+            &:before{
+                border:5px solid transparent;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-color: transparent transparent #fff;
+                top: -9px;
+                content: " ";
+                left: 135px;
+            }
         }
     }
 </style>

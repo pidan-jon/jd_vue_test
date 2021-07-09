@@ -2,12 +2,7 @@
   <div class="nav" ref="nav" :style="setNavWidth" >
       <div class="main" ref="main" :style="setMainWidth">
           <div class="left">
-              <a>
-                <i class="icon">
-                    <img src="../../public/img/icon/location.png">
-                </i>
-                <span>广西</span>
-              </a>
+              <CityList></CityList>
           </div>
           <div class="right">
               <ul>
@@ -15,6 +10,12 @@
                   <li class="spacer"></li>
                   <li><SiteMap :mainWidth="this.mainWidth"></SiteMap></li>
                   <li class="spacer"></li>
+                  <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[0].navtagName"></Navlist></li>
+                  <li>
+                      <p>
+                          {{$store.state.textname}}
+                      </p>
+                  </li>
               </ul>
           </div>
       </div>
@@ -24,11 +25,15 @@
 <script>
 import PhoneJD from '@/components/Fs/Navigetion/PhoneJD.vue'
 import SiteMap from '@/components/Fs/Navigetion/SiteMap.vue'
+import CityList from '@/components/Fs/Navigetion/CityList.vue'
+import Navlist from '@/components/Fs/Navigetion/Navlist.vue'
 export default {
     name: 'Navigation',
     components: { 
         PhoneJD,
-        SiteMap
+        SiteMap,
+        CityList,
+        Navlist
     },
     props: {
         browserWidth:{
@@ -41,6 +46,11 @@ export default {
         navRight:["登录"],
         clientWidth: '',
         mainwidth:0,
+        tagNamelist:[
+            {
+                navtagName:"客户服务"
+            }
+        ]
       }
     },
     computed: {
@@ -76,6 +86,12 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style >
+@import "http://at.alicdn.com/t/font_2663232_sbvr8ri2rxq.css";
+.iconfont{
+    font-size:12px !important
+}
+</style>
 <style scoped lang="less">
   :root {
     --navwidth: 1130px;
@@ -97,26 +113,6 @@ export default {
         .left{
             float: left;
             height: 30px;
-            a{
-                .icon{
-                    float: left;
-                    img{
-                        margin-top: 5px;
-                        height: 20px;
-                        width: 20px;
-                    }
-                }
-                display: block;
-                height: 30px;
-                padding: 0 5px;
-                span{
-                    margin-left: 3px;
-                }
-            }
-            a:hover{
-            cursor:pointer;
-            background: #fff;
-            }
         }
         .right{
             float: right;
