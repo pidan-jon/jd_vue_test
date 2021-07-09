@@ -11,18 +11,9 @@
                   <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[1].navtagName"
                   :NavlistData="gatSMBoxdata"></Navlist></li>
                   <li class="spacer"></li>
-                  <!-- <li><SiteMap :mainWidth="this.mainWidth"></SiteMap></li> -->
-                  <!-- <li class="spacer"></li> -->
                   <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[0].navtagName"
                   :NavlistData="gatCSBoxdata"
                   ></Navlist></li>
-                  
-
-                  <!-- <li>
-                      <p>
-                          {{$store.state.textname}}
-                      </p>
-                  </li> -->
               </ul>
           </div>
       </div>
