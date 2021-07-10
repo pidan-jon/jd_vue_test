@@ -10,7 +10,8 @@
         @mouseover="boxShow" @mouseleave="boxnotShow"
         :class="{
             bigscreen:this.mainWidth==1190&&this.IsSMbox==true,smallscreen:this.mainWidth==990&&this.IsSMbox==true,
-            customer:this.IsCSbox==true
+            customer:this.IsCSbox==true,
+            enterprise:this.IsEPbox==true
             }">
         <div class="itembox" ref="itembox" >
             <div v-for="(item,i) in NavlistData" :key="i" class="itemchlid">
@@ -61,6 +62,7 @@ export default {
             return{
                 IsCSbox:false,
                 IsSMbox:false,
+                IsEPbox:false,
                 IsMouseOver:false, 
             }
         },
@@ -69,10 +71,12 @@ export default {
         mounted(){
             if(this.navtagName=="客户服务"){
                 this.IsCSbox=true;
-                // this.Navlistdata=this.$store.state.Navlistdatak    
             }
             if(this.navtagName=="网站导航"){
                 this.IsSMbox=true;    
+            }
+            if(this.navtagName=="企业采购"){
+                this.IsEPbox=true;    
             }
         }
 
@@ -109,7 +113,7 @@ export default {
             position: absolute;
             background: #fff;
             border: 1px solid #ccc;
-            padding: 10px 0;
+            // padding: 10px 0;
             top: 30px;
             z-index: 1;
             .itembox{
@@ -120,7 +124,7 @@ export default {
                         color: #666;
                     }
                     a{
-                        height: 24px;
+                        // height: 24px;
                         float: left;
                         text-align: left;
                         text-decoration: none;
@@ -133,13 +137,13 @@ export default {
 
             }
         }
-    }       
+           
         .bigscreen{
             right: -75px;
+            padding: 10px 0;
             .itembox{
                 display: flex;
                 justify-content:center;
-                border-left: 1px solid #ccc;
                 .itemchlid{
                     border-left: 1px solid #ccc;
                     padding-left: 20px;
@@ -150,6 +154,7 @@ export default {
                     }
                     a{
                         width: 85px;
+                        height: 24px;
                     }
                 } 
             }   
@@ -157,7 +162,6 @@ export default {
         .smallscreen{
             right: -75px;
             .itembox{
-                border-left: 1px solid #ccc;
                 display: flex;
                 justify-content:center;
                 .itemchlid{
@@ -199,4 +203,25 @@ export default {
                 }
             }
         }
+        .enterprise{
+            width: 140px;
+            padding:10px 0 10px 15px;
+            left: 0;
+            .itembox{
+                .itemchlid{
+                    border-bottom: 1px solid #eee;
+                    overflow: hidden;
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    a{
+                        width: 56px;
+                        line-height: 30px;
+                        white-space: nowrap
+                    }
+                    
+                }
+            }
+        }
+    }   
 </style>

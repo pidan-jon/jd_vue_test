@@ -5,13 +5,16 @@
                 <i class="icon">
                     <img src="img/icon/location.png">
                 </i>
-                <span>广西</span>
+                <span>{{this.CurrentSite}}</span>
             </a>
             <div ref="CityListBox" class="CityListBox" @mouseover="boxShow" @mouseleave="boxnotShow">
                 <div class="CityListItem" v-for="(item,i) in gatsitelist" :key="i">
                     <p>{{item.tit}}</p>
                     <a v-for="(val,name,k) in item.list" :key="k" :href="val"
-                        :data-site='name' @click="getCurrentSite($event)">
+                        :data-site='name' :data-selected='false'
+                         @click="getCurrentSite($event),getCurrentIndex(k)"
+                         :class="{CurrentSiteStyle:k==CurrentIndex}"
+                        >
                         {{name}}
                     </a>
                 </div> 
@@ -25,7 +28,9 @@ export default {
     data(){
         return{
             IsMouseOver:false,
-            CurrentSite:"",
+            IsCurrentSite:false,
+            CurrentSite:"广西",
+            CurrentIndex:99,
         }
     },
     computed:{
@@ -50,8 +55,11 @@ export default {
             this.IsMouseOver=false;   
         },
         getCurrentSite(e){
-            // this.CurrentSite = event;
-            console.log(e.path[0].dataset.site);
+            this.CurrentSite=e.path[0].dataset.site;
+            console.log(e.index)
+        },
+        getCurrentIndex(index){
+            this.CurrentIndex=index
         }
     }
 }
@@ -62,6 +70,10 @@ export default {
     a{
         text-decoration: none;
         color: #999;
+    }
+    a:hover{
+        color: red;
+        background: #f4f4f4;
     }
     position: relative;
     .CityListtag{
@@ -107,9 +119,6 @@ export default {
             float: left;
             padding: 2px 0;
             border-bottom: 1px solid #ccc;
-            a:hover{
-                color: red;
-            }
             &:first-child{
                 margin:0 5px;
                 a{
@@ -117,9 +126,10 @@ export default {
                     float: left;
                     margin: 2px 8px;
                     line-height: 24px;
-                    &:hover{
-                        background: #f4f4f4;
-                    }
+                }
+                .CurrentSiteStyle{
+                    background: red;
+                    color: #fff;
                 }
             }
             &:nth-child(2){

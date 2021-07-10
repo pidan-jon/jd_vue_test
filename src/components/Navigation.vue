@@ -6,14 +6,16 @@
           </div>
           <div class="right">
               <ul>
-                  <li><PhoneJD></PhoneJD></li>
-                  <li class="spacer"></li>
-                  <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[1].navtagName"
-                  :NavlistData="gatSMBoxdata"></Navlist></li>
-                  <li class="spacer"></li>
-                  <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[0].navtagName"
-                  :NavlistData="gatCSBoxdata"
-                  ></Navlist></li>
+                    <li><PhoneJD></PhoneJD></li>
+                    <li class="spacer"></li>
+                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[0].navtagName"
+                        :NavlistData="gatSMBoxdata"></Navlist></li>
+                    <li class="spacer"></li>
+                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[1].navtagName"
+                        :NavlistData="gatCSBoxdata"></Navlist></li>
+                    <li class="spacer"></li>
+                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[2].navtagName"
+                        :NavlistData="gatEPBoxdata"></Navlist></li>
               </ul>
           </div>
       </div>
@@ -46,11 +48,14 @@ export default {
         mainwidth:0,
         tagNamelist:[
             {
+                navtagName:"网站导航"
+            },
+            {
                 navtagName:"客户服务"
             },
             {
-                navtagName:"网站导航"
-            }
+                navtagName:"企业采购"
+            },
         ]
       }
     },
@@ -89,6 +94,14 @@ export default {
                 },
             set(newValue) {
                  this.$store.state.SMboxdata = newValue
+                 }
+        },
+        gatEPBoxdata: { 
+            get() {
+                return this.$store.state.EPboxdata
+                },
+            set(newValue) {
+                 this.$store.state.EPboxdata = newValue
                  }
         }
     },
