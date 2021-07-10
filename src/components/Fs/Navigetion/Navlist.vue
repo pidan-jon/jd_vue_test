@@ -11,7 +11,8 @@
         :class="{
             bigscreen:this.mainWidth==1190&&this.IsSMbox==true,smallscreen:this.mainWidth==990&&this.IsSMbox==true,
             customer:this.IsCSbox==true,
-            enterprise:this.IsEPbox==true
+            enterprise:this.IsEPbox==true,
+            myjingdong:this.IsMJbox==true,
             }">
         <div class="itembox" ref="itembox" >
             <div v-for="(item,i) in NavlistData" :key="i" class="itemchlid">
@@ -63,6 +64,7 @@ export default {
                 IsCSbox:false,
                 IsSMbox:false,
                 IsEPbox:false,
+                IsMJbox:false,
                 IsMouseOver:false, 
             }
         },
@@ -77,6 +79,9 @@ export default {
             }
             if(this.navtagName=="企业采购"){
                 this.IsEPbox=true;    
+            }
+            if(this.navtagName=="我的京东"){
+                this.IsMJbox=true;    
             }
         }
 
@@ -216,6 +221,27 @@ export default {
                     }
                     a{
                         width: 56px;
+                        line-height: 30px;
+                        white-space: nowrap
+                    }
+                    
+                }
+            }
+        }
+        .myjingdong{
+            width: 265px;
+            padding: 0 0 0 15px;
+            left: 0;
+            .itembox{
+                .itemchlid{
+                    padding:10px 0;
+                    border-bottom: 1px solid #eee;
+                    overflow: hidden;
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    a{
+                        width: 126px;
                         line-height: 30px;
                         white-space: nowrap
                     }

@@ -133,6 +133,26 @@ export default new Vuex.Store({
             }
         }
     ],
+    MJboxdata:[
+        {
+            title:"",
+            menuitem:{
+                待处理订单:"#",
+                我的问答:"#",
+                返修退换货:"#",
+                我的关注:"#",
+                降价产品:"#",
+            }
+        }, {
+            title:"",
+            menuitem:{
+                我的京豆:"#",
+                我的优惠卷:"#",
+                我的白条:"#",
+                我的理财:"#",
+            }
+        },
+    ],
     sitelist:[{
   tit:"",
   list:{
@@ -167,6 +187,7 @@ export default new Vuex.Store({
       "Global Site":"#",
   }
     }]
+    
   },
   mutations: {
 

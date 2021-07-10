@@ -16,7 +16,17 @@
                     <li class="spacer"></li>
                     <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[2].navtagName"
                         :NavlistData="gatEPBoxdata"></Navlist></li>
+                    <li class="spacer"></li>
+                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[3].navtagName"
+                        :NavlistData="gatEPBoxdata"></Navlist></li>
+                    <li class="spacer"></li>
+                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[4].navtagName"
+                        :NavlistData="gatMJBoxdata"></Navlist></li>
+                    <li class="spacer"></li>
+                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[5].navtagName"
+                        :NavlistData="gatMJBoxdata"></Navlist></li>
               </ul>
+              <span>免费注册</span>
           </div>
       </div>
   </div>
@@ -56,6 +66,15 @@ export default {
             {
                 navtagName:"企业采购"
             },
+            {
+                navtagName:"京东会员"
+            },
+            {
+                navtagName:"我的京东"
+            },
+            {
+                navtagName:"我的订单"
+            }
         ]
       }
     },
@@ -103,6 +122,14 @@ export default {
             set(newValue) {
                  this.$store.state.EPboxdata = newValue
                  }
+        },
+        gatMJBoxdata: { 
+            get() {
+                return this.$store.state.MJboxdata
+                },
+            set(newValue) {
+                 this.$store.state.MJboxdata = newValue
+                 }
         }
     },
     watch: {
@@ -145,7 +172,6 @@ export default {
             height: 30px;
         }
         .right{
-            float: right;
             ul{
                 li{              
                     float: right;
