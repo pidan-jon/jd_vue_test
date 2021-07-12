@@ -42,11 +42,9 @@
 </template>
 
 <script>
-import TopSearch from '@/components/TopSearch.vue'
 export default {
   name: 'Header',
     components: {
-        TopSearch
     },
     props: {
         browserWidth:{
