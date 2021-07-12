@@ -5,28 +5,25 @@
               <CityList></CityList>
           </div>
           <div class="right">
-              <ul>
+                <ul>
                     <li><PhoneJD></PhoneJD></li>
-                    <li class="spacer"></li>
-                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[0].navtagName"
-                        :NavlistData="gatSMBoxdata"></Navlist></li>
-                    <li class="spacer"></li>
-                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[1].navtagName"
-                        :NavlistData="gatCSBoxdata"></Navlist></li>
-                    <li class="spacer"></li>
-                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[2].navtagName"
-                        :NavlistData="gatEPBoxdata"></Navlist></li>
-                    <li class="spacer"></li>
-                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[3].navtagName"
-                        :NavlistData="gatEPBoxdata"></Navlist></li>
-                    <li class="spacer"></li>
-                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[4].navtagName"
-                        :NavlistData="gatMJBoxdata"></Navlist></li>
-                    <li class="spacer"></li>
-                    <li><Navlist :mainWidth="this.mainWidth" :navtagName="this.tagNamelist[5].navtagName"
-                        :NavlistData="gatMJBoxdata"></Navlist></li>
-              </ul>
-              <span>免费注册</span>
+                    <li v-for="(item,i) in gatNavigation" :key="i">
+                        <Navlist 
+                            class="Navlist"
+                            :mainWidth="mainWidth"
+                            :navtagName="item.navtagName"
+                            :NavlistData="item.boxdata"
+                            :TagClass="item.tagClass">
+                        </Navlist>
+                        <span class="spacer"></span>
+                    </li>
+                </ul>
+                <div class="register">
+                    <a class="redalink" href="#">免费注册</a>
+                </div>
+                <div class="login">
+                    <a class="linkhoverred" href="#">您好，请登录</a>
+                </div>
           </div>
       </div>
   </div>
@@ -34,14 +31,12 @@
 
 <script>
 import PhoneJD from '@/components/Fs/Navigetion/PhoneJD.vue'
-import SiteMap from '@/components/Fs/Navigetion/SiteMap.vue'
 import CityList from '@/components/Fs/Navigetion/CityList.vue'
 import Navlist from '@/components/Fs/Navigetion/Navlist.vue'
 export default {
     name: 'Navigation',
     components: { 
         PhoneJD,
-        SiteMap,
         CityList,
         Navlist
     },
@@ -55,27 +50,6 @@ export default {
       return {
         navRight:["登录"],
         clientWidth: '',
-        mainwidth:0,
-        tagNamelist:[
-            {
-                navtagName:"网站导航"
-            },
-            {
-                navtagName:"客户服务"
-            },
-            {
-                navtagName:"企业采购"
-            },
-            {
-                navtagName:"京东会员"
-            },
-            {
-                navtagName:"我的京东"
-            },
-            {
-                navtagName:"我的订单"
-            }
-        ]
       }
     },
     computed: {
@@ -99,36 +73,12 @@ export default {
                 '--mainwidth': this.mainWidth+'px'
             }
         },
-        gatCSBoxdata: { 
+        gatNavigation: { 
             get() {
-                return this.$store.state.CSboxdata
+                return this.$store.state.Navigation
                 },
             set(newValue) {
-                 this.$store.state.CSboxdata = newValue
-                 }
-        },
-        gatSMBoxdata: { 
-            get() {
-                return this.$store.state.SMboxdata
-                },
-            set(newValue) {
-                 this.$store.state.SMboxdata = newValue
-                 }
-        },
-        gatEPBoxdata: { 
-            get() {
-                return this.$store.state.EPboxdata
-                },
-            set(newValue) {
-                 this.$store.state.EPboxdata = newValue
-                 }
-        },
-        gatMJBoxdata: { 
-            get() {
-                return this.$store.state.MJboxdata
-                },
-            set(newValue) {
-                 this.$store.state.MJboxdata = newValue
+                 this.$store.state.Navigation = newValue
                  }
         }
     },
@@ -138,22 +88,34 @@ export default {
     },
     created() {
     },
-
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style >
+<style lang="less">
 @import "http://at.alicdn.com/t/font_2663232_sbvr8ri2rxq.css";
 .iconfont{
     font-size:12px !important
 }
+.Navlist{
+    display: inline-block;
+}
+a{
+    color:#999;
+}
+.redalink{
+  color: red;
+}
+.linkhoverred{
+    &:hover{
+        color: #e33333;
+    }
+}
 </style>
 <style scoped lang="less">
-  :root {
+:root {
     --navwidth: 1130px;
     --mainwidth: 990px;
-  }
+}
 .nav{
     width: var(--navwidth,1130px);
     background: #e3e4e5;
@@ -176,15 +138,24 @@ export default {
                 li{              
                     float: right;
                     list-style: none;
-
+                    height: 30px;
+                    .spacer{
+                        display:inline-block;
+                        overflow: hidden;
+                        margin: 0px 5px 11px;
+                        width: 1px;
+                        height: 10px;
+                        background-color: #ccc;
+                    }
                 }
-                .spacer{
-                    overflow: hidden;
-                    margin: 11px 5px 0;
-                    width: 1px;
-                    height: 10px;
-                    background-color: #ccc;
-                }
+            }
+            .login{
+                float:right;
+                margin:  0 7px 0 0;
+            }
+            .register{
+                float:right;
+                margin:  0 7px 0 0;
             }
         }
     }
