@@ -30,9 +30,9 @@
 </template>
 
 <script>
-import PhoneJD from '@/components/Fs/Navigetion/PhoneJD.vue'
-import CityList from '@/components/Fs/Navigetion/CityList.vue'
-import Navlist from '@/components/Fs/Navigetion/Navlist.vue'
+import PhoneJD from '@/components/Navigetion/PhoneJD.vue'
+import CityList from '@/components/Navigetion/CityList.vue'
+import Navlist from '@/components/Navigetion/Navlist.vue'
 export default {
     name: 'Navigation',
     components: { 
@@ -43,7 +43,7 @@ export default {
     props: {
         browserWidth:{
             type: Number,
-            default: 1300,
+            default: 1190,
         },
     },
     data(){

@@ -1,7 +1,7 @@
 <template>
     <div>
         <Navigation :browserWidth="this.fixedBrowserWidth"></Navigation>
-        <Header></Header>
+        <Header :browserWidth="this.fixedBrowserWidth"></Header>
         <First></First>
     </div>
 </template>
@@ -75,6 +75,15 @@ export default {
 }
 a{
   text-decoration: none;
+  font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+  color: #666;
+  cursor:pointer; 
+}
+li{
+  list-style: none;
+}
+button{
+  cursor:pointer;
 }
 
 </style>
