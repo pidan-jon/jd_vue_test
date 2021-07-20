@@ -57,7 +57,7 @@ export default {
             return this.browserWidth
         },
         mainWidth:function(){
-            if(this.navWidth<1130){
+            if(this.navWidth<1330){
                 return 990
             }else{
                 return 1190
@@ -113,11 +113,11 @@ a{
 </style>
 <style scoped lang="less">
 :root {
-    --navwidth: 1130px;
-    --mainwidth: 990px;
+    --navwidth: 1330px;
+    --mainwidth: 1190px;
 }
 .nav{
-    width: var(--navwidth,1130px);
+    width: var(--navwidth,1330px);
     background: #e3e4e5;
     height: 30px;
     font-family:Arial,sans-serif;

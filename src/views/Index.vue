@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <Navigation :browserWidth="this.fixedBrowserWidth"></Navigation>
-        <Header :browserWidth="this.fixedBrowserWidth"></Header>
-        <First></First>
-    </div>
+  <div class="indexroot">
+    <Navigation :browserWidth="this.fixedBrowserWidth"></Navigation>
+    <Header :browserWidth="this.fixedBrowserWidth"></Header>
+    <First :browserWidth="this.fixedBrowserWidth"></First>
+  </div>
 </template>
 
 <script>
@@ -43,7 +43,6 @@ export default {
           _this.timer = false
         }, 500)
       }
-      
     },
   },
   methods:{
@@ -84,6 +83,9 @@ li{
 }
 button{
   cursor:pointer;
+}
+indexroot{
+  background-color: #f4f4f4;
 }
 
 </style>

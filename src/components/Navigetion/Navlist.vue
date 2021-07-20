@@ -43,7 +43,7 @@ export default {
             navtagName: {
                 type: String,
                 default: "",
-            },//浏览器宽度
+            },//标签名字
             NavlistData:{
                 type: Array,
                 default: "",
@@ -202,6 +202,7 @@ export default {
                     }
                     a{
                         width: 100px;
+                        height: 24px;
                     }
                 }  
             }
@@ -209,7 +210,7 @@ export default {
         //客户服务样式
         .customer{
             width: 170px;
-            padding:10px 0;
+            padding:5px 0;
             right: 0;
             .itembox{
                 .itemchlid{
@@ -220,12 +221,12 @@ export default {
                         border-bottom: none;
                     }
                     p{
-                        padding: 0 0 0 15px;
+                        padding: 5px 0 0 15px;
                         line-height: 24px;
                         width: 155px;
                     }
                     a{
-                        padding: 0 0 0 15px;
+                        padding: 5px 0 5px 15px;
                         width: 70px;
                     }
                     

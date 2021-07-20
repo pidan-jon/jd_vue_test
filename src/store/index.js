@@ -6,10 +6,115 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     hotword:['手机11. 11','爆品3折','开关插座','爆款5折','进口好物','大粉水','300减40','低至9.9'],
-    list:{
-      1:'AA/BB',
-      2:'CC/DD'
-    },
+    FsCol1list:[
+        {
+            keyword:{家用电器:"#"},
+            boxdata:{
+                channel:{
+                    家电馆:"#",
+                    家电专卖店:"#",
+                    家电服务:"#",
+                    企业采购:"#",
+                    商用电器:"#",
+                    高价回收:"#",
+                },
+                detail:[
+                {
+                    detailtit:'电视',
+                    detailcontent:{
+                        '全面屏电视':"#",
+                        '教育电视':"#",
+                        'OLED电视':"#",
+                        '智慧屏':"#",
+                        '4K超清电视':"#",
+                        '55英寸':"#",
+                    }
+                },
+                {
+                    detailtit:'空调',
+                    detailcontent:{
+                        '空调挂机':"#",
+                        '空调柜机':"#",
+                        '中央空调':"#",
+                        '变频空调':"#",
+                        '一级能效':"#",
+                        '移动空调':"#",
+                    }
+                }],
+                brand:{
+                        '西门子':'/img/First/FsCol1/ximenzi.jpg',
+                        '万和':'/img/First/FsCol1/ximenzi.jpg',
+                        '惠普':'/img/First/FsCol1/ximenzi.jpg',
+                        'LETV':'/img/First/FsCol1/ximenzi.jpg',
+                        '海尔':'/img/First/FsCol1/ximenzi.jpg',
+                        '格力':'/img/First/FsCol1/ximenzi.jpg',
+                        '飞利浦':'/img/First/FsCol1/ximenzi.jpg',
+                        '海信':'/img/First/FsCol1/ximenzi.jpg'
+                    },
+                promotion:
+                    {
+                        AD1:'img/First/Recommend1.jpg',
+                        AD2:'img/First/Recommend2.jpg'
+                    }
+                
+            }  
+        },
+        {
+            keyword:{
+                手机:"#",
+                运营商:"#",
+                数码:"#"
+            },
+            boxdata:{
+                channel:{
+                    家电馆:"#",
+                    家电专卖店:"#",
+                    家电服务:"#",
+                    企业采购:"#",
+                    商用电器:"#",
+                    高价回收:"#",
+                },
+                detail:[
+                {
+                    detailtit:'电视1',
+                    detailcontent:{
+                        '全面屏电视':"#",
+                        '教育电视':"#",
+                        'OLED电视':"#",
+                        '智慧屏':"#",
+                        '4K超清电视':"#",
+                        '55英寸':"#",
+                    }
+                },
+                {
+                    detailtit:'空调1',
+                    detailcontent:{
+                        '空调挂机':"#",
+                        '空调柜机':"#",
+                        '中央空调':"#",
+                        '变频空调':"#",
+                        '一级能效':"#",
+                        '移动空调':"#",
+                    }
+                }],
+                brand:{
+                        '西门子':'/img/First/FsCol1/ximenzi.jpg',
+                        '万和':'/img/First/FsCol1/ximenzi.jpg',
+                        '惠普':'/img/First/FsCol1/ximenzi.jpg',
+                        'LETV':'/img/First/FsCol1/ximenzi.jpg',
+                        '海尔':'/img/First/FsCol1/ximenzi.jpg',
+                        '格力':'/img/First/FsCol1/ximenzi.jpg',
+                        '飞利浦':'/img/First/FsCol1/ximenzi.jpg',
+                        '海信':'/img/First/FsCol1/ximenzi.jpg'
+                },
+                promotion:
+                    {
+                        AD1:'img/First/Recommend1.jpg',
+                        AD2:'img/First/Recommend2.jpg'
+                    }
+            }   
+        }
+    ],
     textname:"textname",
     Navigation:[
         {
@@ -99,10 +204,6 @@ export default new Vuex.Store({
                         "新品首发7":"#",
                         "新品首发8":"#",
                         "新品首发9":"#",
-                        "新品首发11":"#",
-                        "新品首发12":"#",
-                        "新品首发13":"#",
-                        "新品首发14":"#"
                     }                    
                 },
                 {
@@ -116,10 +217,6 @@ export default new Vuex.Store({
                         "新品首发7":"#",
                         "新品首发8":"#",
                         "新品首发9":"#",
-                        "新品首发11":"#",
-                        "新品首发12":"#",
-                        "新品首发13":"#",
-                        "新品首发14":"#"
                     }                    
                 },                  
             ],
@@ -210,7 +307,119 @@ export default new Vuex.Store({
   list:{
       "Global Site":"#",
   }
-    }]
+    }],
+    newsList:[
+        {
+            newsTag:"热门",
+            newsContent:"大屏全能型办公本，小新Pro 16当仁不让！"
+        },
+        {
+            newsTag:"HOT",
+            newsContent:"大屏全能型办公本，小新Pro 16当仁不让！"
+        },
+        {
+            newsTag:"最新",
+            newsContent:"大屏全能型办公本，小新Pro 16当仁不让！"
+        },
+        {
+            newsTag:"热议",
+            newsContent:"大屏全能型办公本，小新Pro 16当仁不让！"
+        },
+    ],
+    serviceList:[
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+        {
+            tag:"话费",
+            img1:"/img/icon/cat.png",
+            img2:"/img/icon/camera.png",
+            link:"#"
+        },
+    ],
+    sliderRecommendList:[
+        {
+            img1:"/img/First/Recommend1.jpg",
+            img2:"/img/First/Recommend1.jpg",
+            img3:"/img/First/Recommend1.jpg",
+        },
+        {
+            img1:"/img/First/Recommend2.jpg",
+            img2:"/img/First/Recommend2.jpg",
+            img3:"/img/First/Recommend2.jpg",
+        },
+        {
+            img1:"/img/First/Recommend3.jpg",
+            img2:"/img/First/Recommend3.jpg",
+            img3:"/img/First/Recommend3.jpg",
+        },
+    ]
   },
   mutations: {
 
