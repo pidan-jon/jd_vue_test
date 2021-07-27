@@ -42,30 +42,30 @@ export default {
             DataItem:[{
                 name:"手机京东",
                 recommend:"新人推荐",
-                QRcode:"/img/QRcode/cat.png",
+                QRcode:"img/QRcode/cat.png",
                 smallIcon:["ios","android","ipad"],
             },
             {
                 name:"关注京东",
                 secondName:"JD.COM",
                 recommend:"抢5元红包",
-                QRcode:"/img/QRcode/cat.png",
+                QRcode:"img/QRcode/cat.png",
             },
             {
                 name:"京东金融客户端",
                 recommend:"新人专享大礼包",
-                QRcode:"/img/QRcode/cat.png",
+                QRcode:"img/QRcode/cat.png",
                 smallIcon:["ios","android","ipad"],
             },
             {
                 name:"京东健康客户端",
-                QRcode:"/img/QRcode/cat.png",
+                QRcode:"img/QRcode/cat.png",
                 smallIcon:["ios","android"],
             },
             {
                 name:"关注京东小程序",
                 recommend:"新人0.1元购",
-                QRcode:"/img/QRcode/cat.png",
+                QRcode:"img/QRcode/cat.png",
             }
             ],
             
@@ -131,15 +131,15 @@ export default {
                             width: 24px;
                         }
                         .ios{
-                            background-image: url(/img/icon/JD_device.png);
+                            background-image: url(../../../public/img/icon/JD_device.png);
                             background-position: 0 0;
                         }
                         .android{
-                            background-image: url(/img/icon/JD_device.png);
+                            background-image: url(../../../public/img/icon/JD_device.png);
                             background-position: 0 -26px;
                         }
                         .ipad{
-                            background-image: url(/img/icon/JD_device.png);
+                            background-image: url(../../../public/img/icon/JD_device.png);
                             background-position: 0 -52px;
                         }
                         }

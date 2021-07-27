@@ -1,5 +1,5 @@
 <template>
-    <div class="SliderBanner" @mouseenter="enter(index)" @mouseleave="leave()">
+    <div class="SliderBanner" @mouseenter="enter()" @mouseleave="leave()">
         <div class="wrap" style="left:-590px;" ref="mywrap" >
             <a v-for="(item,index) in bannerdatas" :key="index" :href="item.piclink">
                 <img :src="item.picSrc" :alt="item.piccIndex">
@@ -29,37 +29,37 @@ export default {
                 {
                     picIndex:0,
                     picLink:'#',
-                    picSrc:'/img/banner/b5.jpg'
+                    picSrc:'img/banner/b5.jpg'
                 },
                 {
                     picIndex:1,
                     picLink:'#',
-                    picSrc:'/img/banner/b1.jpg'
+                    picSrc:'img/banner/b1.jpg'
                 },
                 {
                     picIndex:2,
                     picLink:'#',
-                    picSrc:'/img/banner/b2.jpg'
+                    picSrc:'img/banner/b2.jpg'
                 },
                 {
                     picIndex:3,
                     picLink:'#',
-                    picSrc:'/img/banner/b3.jpg'
+                    picSrc:'img/banner/b3.jpg'
                 },
                 {
                     picIndex:4,
                     picLink:'#',
-                    picSrc:'/img/banner/b4.jpg'
+                    picSrc:'img/banner/b4.jpg'
                 },
                 {
                     picIndex:5,
                     picLink:'#',
-                    picSrc:'/img/banner/b5.jpg'
+                    picSrc:'img/banner/b5.jpg'
                 },
                 {
                     picIndex:6,
                     picLink:'#',
-                    picSrc:'/img/banner/b1.jpg'
+                    picSrc:'img/banner/b1.jpg'
                 },
             ]//图片数据
 	    }

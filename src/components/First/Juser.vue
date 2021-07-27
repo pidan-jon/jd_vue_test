@@ -55,7 +55,7 @@ export default {
                     overflow: hidden;
                     -webkit-box-shadow: 0 2px 8px rgba(0,0,0,.05);
                     box-shadow: 0 2px 8px rgba(0,0,0,.05);
-                    background-image: url(/img/First/Juser.png);
+                    background-image: url(../../../public/img/First/Juser.png);
                     background-size:contain;
                     background-repeat:no-repeat;
                 }

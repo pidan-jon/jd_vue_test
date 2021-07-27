@@ -1,27 +1,29 @@
 <template>
-    <div id="footer_root">
+    <div id="footer_root" >
         <div class="footer_service">
             <div class="service_list">
-                <div class="service_item">
-                    <span class="service_tit">
-
+                <div class="service_item" v-for="(item,i) in getFooter.footerService" :key="i">
+                    <span class="service_tit" 
+                        :class="[{service_duo:item.tit=='多'},{service_kuai:item.tit=='快'},
+                        {service_hao:item.tit=='好'},{service_sheng:item.tit=='省'}]">
+                        {{item.tit}}
                     </span>
                     <p class="service_txt">
-
+                        {{item.txt}}
                     </p>
                 </div>
             </div>
         </div>
         <div class="footer_help">
             <div class="help_list">
-                <div class="help_item">
+                <div class="help_item" v-for="(item,i) in getFooter.footerHelp" :key="i">
                     <p class="help_tit">
-
+                        {{item.tit}}
                     </p>
                     <ul class="help_txt">
-                        <li>
-                            <a>
-
+                        <li v-for="(item,i) in item.con" :key="i">
+                            <a :href="item.link">
+                                {{item.txt}}
                             </a>
                         </li>
                     </ul>
@@ -29,8 +31,9 @@
             </div>
         </div>
         <div class="footer_copyright">
-            <div class="copyright_links">
-                <a></a>
+            <div class="copyright_links" v-for="(item,i) in getFooter.footerCopyright" :key="i">
+                <a :href="item.link">{{item.txt}}</a>
+                <span class="copyright_split">|</span>
             </div>
         </div>
     </div>
@@ -38,7 +41,17 @@
 
 <script>
 export default {
-    name:'Footer'
+    name:'Footer',
+    computed:{
+        getFooter: { 
+        get() {
+            return this.$store.state.footer
+            },
+        set(newValue) {
+                     this.$store.state.footer = newValue
+           }
+        }
+    }
 }
 </script>
 
@@ -65,6 +78,7 @@ export default {
                         width: 36px;
                         height: 42px;
                         text-indent: -999px;
+                        background-repeat: no-repeat;
                     }
                     .service_txt{
                         overflow: hidden;
@@ -118,6 +132,11 @@ export default {
             margin: 0 auto;
             padding: 15px 0;
             border-top: 1px solid #e1e1e1;
+            text-align: center;
+            .copyright_split{
+                margin: 0 10px;
+                color: #ccc;
+            }
         }
         .sm_footer_ccopyright{
             width: 990px;

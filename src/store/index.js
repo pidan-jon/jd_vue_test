@@ -42,14 +42,14 @@ export default new Vuex.Store({
                     }
                 }],
                 brand:{
-                        '西门子':'/img/First/FsCol1/ximenzi.jpg',
-                        '万和':'/img/First/FsCol1/ximenzi.jpg',
-                        '惠普':'/img/First/FsCol1/ximenzi.jpg',
-                        'LETV':'/img/First/FsCol1/ximenzi.jpg',
-                        '海尔':'/img/First/FsCol1/ximenzi.jpg',
-                        '格力':'/img/First/FsCol1/ximenzi.jpg',
-                        '飞利浦':'/img/First/FsCol1/ximenzi.jpg',
-                        '海信':'/img/First/FsCol1/ximenzi.jpg'
+                        '西门子':'img/First/FsCol1/ximenzi.jpg',
+                        '万和':'img/First/FsCol1/ximenzi.jpg',
+                        '惠普':'img/First/FsCol1/ximenzi.jpg',
+                        'LETV':'img/First/FsCol1/ximenzi.jpg',
+                        '海尔':'img/First/FsCol1/ximenzi.jpg',
+                        '格力':'img/First/FsCol1/ximenzi.jpg',
+                        '飞利浦':'img/First/FsCol1/ximenzi.jpg',
+                        '海信':'img/First/FsCol1/ximenzi.jpg'
                     },
                 promotion:
                     {
@@ -98,14 +98,14 @@ export default new Vuex.Store({
                     }
                 }],
                 brand:{
-                        '西门子':'/img/First/FsCol1/ximenzi.jpg',
-                        '万和':'/img/First/FsCol1/ximenzi.jpg',
-                        '惠普':'/img/First/FsCol1/ximenzi.jpg',
-                        'LETV':'/img/First/FsCol1/ximenzi.jpg',
-                        '海尔':'/img/First/FsCol1/ximenzi.jpg',
-                        '格力':'/img/First/FsCol1/ximenzi.jpg',
-                        '飞利浦':'/img/First/FsCol1/ximenzi.jpg',
-                        '海信':'/img/First/FsCol1/ximenzi.jpg'
+                        '西门子':'img/First/FsCol1/ximenzi.jpg',
+                        '万和':'img/First/FsCol1/ximenzi.jpg',
+                        '惠普':'img/First/FsCol1/ximenzi.jpg',
+                        'LETV':'img/First/FsCol1/ximenzi.jpg',
+                        '海尔':'img/First/FsCol1/ximenzi.jpg',
+                        '格力':'img/First/FsCol1/ximenzi.jpg',
+                        '飞利浦':'img/First/FsCol1/ximenzi.jpg',
+                        '海信':'img/First/FsCol1/ximenzi.jpg'
                 },
                 promotion:
                     {
@@ -273,7 +273,6 @@ export default new Vuex.Store({
             tagClass:""
         }
     ],
-
     sitelist:[{
   tit:"",
   list:{
@@ -329,97 +328,291 @@ export default new Vuex.Store({
     serviceList:[
         {
             tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
             link:"#"
         },
         {
             tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
             link:"#"
         },
         {
             tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
-            link:"#"
-        },
-
-        {
-            tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
             link:"#"
         },
 
         {
             tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
             link:"#"
         },
 
         {
             tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
+            link:"#"
+        },
+
+        {
+            tag:"话费",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
             link:"#"
         },
         {
             tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
             link:"#"
         },
         {
             tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
             link:"#"
         },
         {
             tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
             link:"#"
         },
         {
             tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
             link:"#"
         },
         {
             tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
             link:"#"
         },
         {
             tag:"话费",
-            img1:"/img/icon/cat.png",
-            img2:"/img/icon/camera.png",
+            img1:"img/icon/cat.png",
+            img2:"img/icon/camera.png",
             link:"#"
         },
     ],
     sliderRecommendList:[
         {
-            img1:"/img/First/Recommend1.jpg",
-            img2:"/img/First/Recommend1.jpg",
-            img3:"/img/First/Recommend1.jpg",
+            img1:"img/First/Recommend1.jpg",
+            img2:"img/First/Recommend1.jpg",
+            img3:"img/First/Recommend1.jpg",
         },
         {
-            img1:"/img/First/Recommend2.jpg",
-            img2:"/img/First/Recommend2.jpg",
-            img3:"/img/First/Recommend2.jpg",
+            img1:"img/First/Recommend2.jpg",
+            img2:"img/First/Recommend2.jpg",
+            img3:"img/First/Recommend2.jpg",
         },
         {
-            img1:"/img/First/Recommend3.jpg",
-            img2:"/img/First/Recommend3.jpg",
-            img3:"/img/First/Recommend3.jpg",
+            img1:"img/First/Recommend3.jpg",
+            img2:"img/First/Recommend3.jpg",
+            img3:"img/First/Recommend3.jpg",
         },
-    ]
+    ],
+    footer:{
+        footerService:[
+            {
+                tit:"多",
+                txt:"品类齐全，轻松购物"
+            }
+        ],
+        footerHelp:[
+            {
+                tit:"购物指南",
+                con:[
+                    {
+                        link:"#",
+                        txt:"购物流程"
+                    }
+                ]
+            }
+        ],
+        footerCopyright:[
+            {
+                link:'#',
+                txt:"关于我们"
+            }
+        ]
+
+    },
+    seckillList:[
+        {
+            itemnumber:'1',
+            itemList:[
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+            ]
+        },
+        {
+            itemnumber:'2',
+            itemList:[
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+            ]
+        },
+        {
+            itemnumber:'3',
+            itemList:[
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+            ]
+        },
+        {
+            itemnumber:'4',
+            itemList:[
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+            ]
+        },
+        {
+            itemnumber:'5',
+            itemList:[
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+                {
+                    link:'#',
+                    img:'img/Seckill/seckillList01.jpg',
+                    desc:'山茶油',
+                    priceDiscount:'279.00',
+                    priceOrigin:'338.00'
+                },
+            ]
+        },
+        
+    ]     
   },
   mutations: {
 

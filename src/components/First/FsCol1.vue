@@ -4,7 +4,7 @@
             <li v-for="(item,i) in list" :key="i" @mouseover="getCurrentIndex(i)" @mouseout="resCurrentIndex()">
                 <span v-for="(val,name,i) in item.keyword" :key="i">
                     <a>{{ name }}</a>
-                    <span>/</span>
+                    <span v-if="i!=Object.keys(item.keyword).length-1">/</span>
                 </span>
             </li>
         </ul>

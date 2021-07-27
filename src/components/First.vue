@@ -36,7 +36,6 @@ import SliderRecommend from './First/SliderRecommend.vue'
 import Juser from './First/Juser.vue'
 import Jnews from './First/Jnews.vue'
 import Jservice from './First/Jservice.vue'
-import Dome from './First/Dome.vue'
 
 export default {
     name:'First',
@@ -47,7 +46,6 @@ export default {
         Juser,
         Jnews,
         Jservice,
-        Dome
     },
     props: {
         browserWidth:{

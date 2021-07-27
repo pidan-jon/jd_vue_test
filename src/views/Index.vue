@@ -3,6 +3,8 @@
     <Navigation :browserWidth="this.fixedBrowserWidth"></Navigation>
     <Header :browserWidth="this.fixedBrowserWidth"></Header>
     <First :browserWidth="this.fixedBrowserWidth"></First>
+    <Seckill></Seckill>
+    <Footer :browserWidth="this.fixedBrowserWidth"></Footer>
   </div>
 </template>
 
@@ -11,13 +13,17 @@
 import Navigation from '@/components/Navigation.vue'
 import Header from '@/components/Header.vue'
 import First from '@/components/First.vue'
+import Footer from '@/components/Footer.vue'
+import Seckill from '@/components/Seckill.vue'
 
 export default {
   name: 'home',
   components: {
     Navigation,
     Header,
-    First
+    First,
+    Footer,
+    Seckill
   },
   data(){
     return{
@@ -84,7 +90,7 @@ li{
 button{
   cursor:pointer;
 }
-indexroot{
+.indexroot{
   background-color: #f4f4f4;
 }
 

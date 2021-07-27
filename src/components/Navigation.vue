@@ -7,7 +7,7 @@
           <div class="right">
                 <ul>
                     <li><PhoneJD></PhoneJD></li>
-                    <li v-for="(item,i) in gatNavigation" :key="i">
+                    <li v-for="(item,i) in getNavigation" :key="i">
                         <Navlist 
                             class="Navlist"
                             :mainWidth="mainWidth"
@@ -73,7 +73,7 @@ export default {
                 '--mainwidth': this.mainWidth+'px'
             }
         },
-        gatNavigation: { 
+        getNavigation: { 
             get() {
                 return this.$store.state.Navigation
                 },
@@ -117,7 +117,7 @@ a{
     --mainwidth: 1190px;
 }
 .nav{
-    width: var(--navwidth,1330px);
+    // width: var(--navwidth,1330px);
     background: #e3e4e5;
     height: 30px;
     font-family:Arial,sans-serif;
