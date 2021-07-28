@@ -1,4 +1,5 @@
 <template>
+    <!-- 服务组件 -->
   <div id="serviceroot">
       <div class="service_entry">
           <ul class="service_list">
@@ -15,7 +16,6 @@
       </div>
       <div class="service_pop">
           <div class="service_pop_item">
-
           </div>
       </div>
   </div>
@@ -32,7 +32,7 @@ export default {
     data(){
         return{
             currentIndex:99
-        }
+        }//当前选择项
     },
     methods:{
         enter(index){
@@ -53,6 +53,7 @@ export default {
         -webkit-transition: all .2s ease;
         transition: all .2s ease;
         background: #fff;
+        //图标模块
         .service_entry{
             overflow: hidden;
             padding: 5px .5px;
@@ -98,7 +99,7 @@ export default {
                         }
                     }
                 }
-            }
+            }//图标列表
         }
         .service_pop{
             position: absolute;
@@ -116,7 +117,7 @@ export default {
                 padding: 0 15px;
                 background-color: #fff;
             }
-        }
+        }//弹出项
 
     }
 </style>

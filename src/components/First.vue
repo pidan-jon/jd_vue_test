@@ -56,14 +56,14 @@ export default {
         computed:{
         navWidth:function(){
             return this.browserWidth
-        },
+        },//浏览器宽度
         mainWidth:function(){
             if(this.navWidth<1330){
                 return 990
             }else{
                 return 1190
             }
-        },
+        },//通栏宽度
     },
 }
 </script>

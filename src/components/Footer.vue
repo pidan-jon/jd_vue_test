@@ -1,4 +1,5 @@
 <template>
+<!-- 底部组件 -->
     <div id="footer_root" >
         <div class="footer_service">
             <div class="service_list">

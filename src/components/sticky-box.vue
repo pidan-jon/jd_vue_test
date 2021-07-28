@@ -24,7 +24,7 @@ name:"Stickybox",
         position: 'static',
         top: 0,
         left: 0,
-        width: 'auto', // 占位，为了形成数据绑定
+        width: 'auto', // 占位
         height: 'auto',
       },
       contentStyle: {
@@ -36,7 +36,7 @@ name:"Stickybox",
         'z-index':99,
         'border-bottom':'',
       },
-      isFixedY: false, // 是否已经设置为fixed布局，用于优化性能，防止多次设置
+      isFixedY: false, //用于优化性能
       isFixed: false,
     }
   },
@@ -62,7 +62,6 @@ name:"Stickybox",
     // },
     // 页面缩放重置大小时，重新计算其位置
     sendIsFixed(){
-      //func: 是父组件指定的传数据绑定的函数，this.msg:子组件给父组件传递的数据
       this.$emit('func',this.isFixed)
     },
     onResize() {
@@ -77,8 +76,6 @@ name:"Stickybox",
       const { $box, } = this.$refs
       const { contentStyle,boxStyle } = this
       const boxTop = $box.getBoundingClientRect().top
-      // console.log("boxtop"+boxTop)
-      // console.log("this.top"+this.top)
       if (this.top !== 'unset') {
         if (boxTop > parseInt(this.top) && this.isFixedY) {
           this.isFixedY = false

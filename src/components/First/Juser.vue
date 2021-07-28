@@ -1,4 +1,5 @@
 <template>
+<!-- 用户组件 -->
   <div id="JuserRoot">
       <div class="user_inner">
           <div class="user_avatar">
@@ -25,9 +26,6 @@
 <script>
 export default {
     name:"Juser",
-
-
-
 }
 </script>
 

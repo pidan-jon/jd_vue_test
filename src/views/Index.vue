@@ -27,8 +27,8 @@ export default {
   },
   data(){
     return{
-      browserWidth:1330,
-      fixedBrowserWidth:0,
+      browserWidth:1330,//浏览器宽度
+      fixedBrowserWidth:0,//性能优化
     }
   },
   computed: {
@@ -49,7 +49,7 @@ export default {
           _this.timer = false
         }, 500)
       }
-    },
+    },//获取浏览器宽度
   },
   methods:{
     getbrowserwidth(){

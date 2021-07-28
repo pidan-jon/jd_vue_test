@@ -1,4 +1,5 @@
 <template>
+<!-- 新闻组件 -->
   <div id="newsroot">
       <div class="news_hd">
           <span class="news_tit">京东快报</span>
@@ -24,7 +25,7 @@ export default {
     computed:{
         newsList(){
             return this.$store.state.newsList;
-        }
+        }//获取数据
     }
 }
 </script>
@@ -52,7 +53,7 @@ export default {
                 font-size: 12px;
                 color: #999;
             }
-        }
+        }//组件标题
         .news_list{
             position: relative;
             margin: 0 15px;
@@ -87,7 +88,7 @@ export default {
 
                 }
             }
-        }
+        }//组件列表
 
     }
 </style>

@@ -62,7 +62,7 @@ export default {
     },
     data(){
         return{
-            isFixed:false
+            isFixed:false//是否fixed
         }
     },
     computed:{

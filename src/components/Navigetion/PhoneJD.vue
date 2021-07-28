@@ -1,6 +1,8 @@
 <template>
+<!-- 手机京东组件 -->
   <div class="PhoneJDRoot">
     <p class="PhoneJDRootTag" @mouseover="boxShow" @mouseleave="boxnotShow">手机京东</p>
+    <!-- 弹出盒 -->
     <div class="box" @mouseover="boxShow" @mouseleave="boxnotShow" ref="PhoneJDbox">  
         <div v-for="(item,i) in DataItem" :key="item.name" class="chlidBox" >
             <div class="chlidboxitem">

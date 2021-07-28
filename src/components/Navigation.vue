@@ -1,4 +1,5 @@
 <template>
+<!-- 顶部导航栏 -->
   <div class="nav" ref="nav" :style="setNavWidth" >
       <div class="main" ref="main" :style="setMainWidth">
           <div class="left">

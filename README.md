@@ -14,3 +14,5 @@ npm run serve
 ```
 npm run build
 ```
+### 网页预览
+![image1](https://github.com/hongjun-6722/jd_vue_text/blob/main/jdIndex.jpg)

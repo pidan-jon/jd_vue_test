@@ -4,8 +4,8 @@ module.exports = {
         assetsDir:"static",
         indexPath:"index.html",
         configureWebpack: {
-                plugins: [
-                        new MyAwesomeWebpackPlugin()
-                ]
+                // plugins: [
+                //         new MyAwesomeWebpackPlugin()
+                // ]
         }
 }

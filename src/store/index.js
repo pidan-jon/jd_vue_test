@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    hotword:['手机11. 11','爆品3折','开关插座','爆款5折','进口好物','大粉水','300减40','低至9.9'],
+    hotword:['手机11. 11','爆品3折','开关插座','爆款5折','进口好物','大粉水','300减40','低至9.9'],//热词
     FsCol1list:[
         {
             keyword:{家用电器:"#"},
@@ -114,7 +114,7 @@ export default new Vuex.Store({
                     }
             }   
         }
-    ],
+    ],//品类选择列表
     textname:"textname",
     Navigation:[
         {
@@ -272,7 +272,7 @@ export default new Vuex.Store({
             boxdata:[],
             tagClass:""
         }
-    ],
+    ],//顶部导航
     sitelist:[{
   tit:"",
   list:{
@@ -306,7 +306,7 @@ export default new Vuex.Store({
   list:{
       "Global Site":"#",
   }
-    }],
+    }],//地区组件数据
     newsList:[
         {
             newsTag:"热门",
@@ -324,7 +324,7 @@ export default new Vuex.Store({
             newsTag:"热议",
             newsContent:"大屏全能型办公本，小新Pro 16当仁不让！"
         },
-    ],
+    ],//新闻组件数据
     serviceList:[
         {
             tag:"话费",
@@ -401,7 +401,7 @@ export default new Vuex.Store({
             img2:"img/icon/camera.png",
             link:"#"
         },
-    ],
+    ],//服务组件数据
     sliderRecommendList:[
         {
             img1:"img/First/Recommend1.jpg",
@@ -418,7 +418,7 @@ export default new Vuex.Store({
             img2:"img/First/Recommend3.jpg",
             img3:"img/First/Recommend3.jpg",
         },
-    ],
+    ],//推荐轮播图数据
     footer:{
         footerService:[
             {
@@ -444,7 +444,7 @@ export default new Vuex.Store({
             }
         ]
 
-    },
+    },//底部组件数据
     seckillList:[
         {
             itemnumber:'1',
@@ -612,7 +612,7 @@ export default new Vuex.Store({
             ]
         },
         
-    ]     
+    ],//秒杀组件数据     
   },
   mutations: {
 

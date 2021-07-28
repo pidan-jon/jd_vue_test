@@ -1,5 +1,7 @@
 <template>
+<!-- 城市组件 -->
   <div class="CityListRoot">
+            <!-- 已选择城市 -->
             <a ref="CityListTag" class="CityListtag" @mouseover="boxShow" @mouseleave="boxnotShow"
                 :class="{taghover:this.IsMouseOver}">
                 <i class="icon">
@@ -7,6 +9,7 @@
                 </i>
                 <span>{{this.CurrentSite}}</span>
             </a>
+            <!-- 城市列表 -->
             <div ref="CityListBox" class="CityListBox" @mouseover="boxShow" @mouseleave="boxnotShow">
                 <div class="CityListItem" v-for="(item,i) in gatsitelist" :key="i">
                     <p>{{item.tit}}</p>
@@ -29,7 +32,7 @@ export default {
         return{
             IsMouseOver:false,
             IsCurrentSite:false,
-            CurrentSite:"广西",
+            CurrentSite:"广西",//默认值
             CurrentIndex:99,
         }
     },

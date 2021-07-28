@@ -1,5 +1,7 @@
 <template>
+    <!-- 品类选择列 -->
     <div class="FsColRoot">
+        <!-- 列表 -->
         <ul class="FsColList">
             <li v-for="(item,i) in list" :key="i" @mouseover="getCurrentIndex(i)" @mouseout="resCurrentIndex()">
                 <span v-for="(val,name,i) in item.keyword" :key="i">
@@ -8,6 +10,7 @@
                 </span>
             </li>
         </ul>
+        <!-- 弹出盒子 -->
         <div class="popbox" ref="popbox" :class="[{showbox1:IsPop},{sm_popbox:mainWidth==990}]"
             @mouseover="getCurrentIndex(fixedCurrentIndex)" @mouseout="resCurrentIndex()">
             <div class="catebox" v-for="(item,i) in list" :key="i" :class="{showbox:fixedCurrentIndex == i }">
@@ -54,36 +57,36 @@ export default {
         mainWidth: {
             type: Number,
             default: 1190,
-        }
-    },//通栏宽度
+        }//通栏宽度
+    },
     computed:{
         list(){
             return this.$store.state.FsCol1list;
-        },
+        },//获取数据
         IsPop(){
             if(this.fixedCurrentIndex==99){
                 return false
             }else{
                 return true
             }
-        }
+        }//判断是否弹出
     },
     data(){
         return{
-            CurrentIndex:99,
-            fixedCurrentIndex:99,
+            CurrentIndex:99,//鼠标移动索引
+            fixedCurrentIndex:99,//防抖
         }
     },
     methods:{
         getCurrentIndex(index){
             this.CurrentIndex=index
-        },
+        },//鼠标移入
         resCurrentIndex(){
             this.CurrentIndex=99
-        },
+        },//鼠标移出
         getbrowserwidth(){
             this.fixedCurrentIndex=Number(this.CurrentIndex);
-        }
+        }//防抖
     },
     watch:{
         CurrentIndex(val) {
@@ -95,7 +98,7 @@ export default {
                     _this.timer = false
                 }, 300)
             }
-        },
+        },//防抖
     }
 }
 </script>
@@ -103,6 +106,7 @@ export default {
 <style lang="less" scoped>
 .FsColRoot{
     position: relative;
+    // 列表
     .FsColList{
         padding: 10px 0;
         height: 450px;
@@ -127,6 +131,7 @@ export default {
             }
         }
     }
+    //弹出盒
     .popbox{
         position: absolute;
         top: 0;
@@ -232,6 +237,7 @@ export default {
             display: block;
         }
     }
+    //窄屏样式
     .sm_popbox{
         width: 798px;
         .catebox{
@@ -240,6 +246,7 @@ export default {
             }
         }
     }
+    //弹出时绑定样式
     .showbox1{
         display: block;
     }

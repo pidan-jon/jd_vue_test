@@ -1,4 +1,5 @@
 <template>
+<!-- 轮播图组件 -->
     <div class="SliderBanner" @mouseenter="enter()" @mouseleave="leave()">
         <div class="wrap" style="left:-590px;" ref="mywrap" >
             <a v-for="(item,index) in bannerdatas" :key="index" :href="item.piclink">

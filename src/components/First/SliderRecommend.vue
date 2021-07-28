@@ -1,4 +1,5 @@
 <template>
+    <!-- 轮播推荐图 -->
     <div id="SliderRecommendRoot" @mouseenter="listMouseover" @mouseleave="listMouseout">
         <div class="slider_control_prev slider_control" @click="sliderPrev" :class="{focusmain:IsMoserover}">
             <i class="iconfont icon-sanjiaoxing"></i>

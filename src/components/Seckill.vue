@@ -1,4 +1,5 @@
 <template>
+<!-- 秒杀组件 -->
     <div id="seckillroot">
         <div class="seckill_countdown">
             <div class="seckill_countdown_tit">
