@@ -53,7 +53,6 @@ export default {
     components: {
         Stickybox
     },
-
     props: {
         browserWidth:{
             type: Number,

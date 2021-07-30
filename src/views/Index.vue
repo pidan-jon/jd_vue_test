@@ -4,6 +4,7 @@
     <Header :browserWidth="this.fixedBrowserWidth"></Header>
     <First :browserWidth="this.fixedBrowserWidth"></First>
     <Seckill></Seckill>
+    <Spec></Spec>
     <Footer :browserWidth="this.fixedBrowserWidth"></Footer>
   </div>
 </template>
@@ -15,6 +16,7 @@ import Header from '@/components/Header.vue'
 import First from '@/components/First.vue'
 import Footer from '@/components/Footer.vue'
 import Seckill from '@/components/Seckill.vue'
+import Spec from '@/components/Spec.vue'
 
 export default {
   name: 'home',
@@ -23,7 +25,8 @@ export default {
     Header,
     First,
     Footer,
-    Seckill
+    Seckill,
+    Spec
   },
   data(){
     return{

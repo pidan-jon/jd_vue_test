@@ -612,7 +612,113 @@ export default new Vuex.Store({
             ]
         },
         
-    ],//秒杀组件数据     
+    ],//秒杀组件数据  
+    SpecialOffer: [
+            {
+                tag: "精选",
+                list: [
+                    {
+                        slogan: "107",
+                        pic: "img/Spec/Spec_SpecialOfffer_01.jpg",
+                        desc: "修正维生素",
+                        discount: "26.9",
+                        origin: "59.9",
+                        soldnum: "397",
+                    },
+                    {
+                        slogan: "107",
+                        pic: "img/Spec/Spec_SpecialOfffer_01.jpg",
+                        desc: "修正维生素",
+                        discount: "26.9",
+                        origin: "59.9",
+                        soldnum: "397",
+                    },
+                    {
+                        slogan: "107",
+                        pic: "img/Spec/Spec_SpecialOfffer_01.jpg",
+                        desc: "修正维生素",
+                        discount: "26.9",
+                        origin: "59.9",
+                        soldnum: "397",
+                    },
+                    {
+                        slogan: "107",
+                        pic: "img/Spec/Spec_SpecialOfffer_01.jpg",
+                        desc: "修正维生素",
+                        discount: "26.9",
+                        origin: "59.9",
+                        soldnum: "397",
+                    },
+                    {
+                        slogan: "107",
+                        pic: "img/Spec/Spec_SpecialOfffer_01.jpg",
+                        desc: "修正维生素",
+                        discount: "26.9",
+                        origin: "59.9",
+                        soldnum: "397",
+                    },
+                ]
+            },
+            {
+                tag: "美食",
+                list: [
+                    {
+                        slogan: "107",
+                        pic: "img/Spec/Spec_SpecialOfffer_01.jpg",
+                        desc: "修正维生素",
+                        discount: "26.9",
+                        origin: "59.9",
+                        soldnum: "397",
+                    },
+                    {
+                        slogan: "107",
+                        pic: "img/Spec/Spec_SpecialOfffer_01.jpg",
+                        desc: "修正维生素",
+                        discount: "26.9",
+                        origin: "59.9",
+                        soldnum: "397",
+                    },
+                    {
+                        slogan: "107",
+                        pic: "img/Spec/Spec_SpecialOfffer_01.jpg",
+                        desc: "修正维生素",
+                        discount: "26.9",
+                        origin: "59.9",
+                        soldnum: "397",
+                    },
+                    {
+                        slogan: "107",
+                        pic: "img/Spec/Spec_SpecialOfffer_01.jpg",
+                        desc: "修正维生素",
+                        discount: "26.9",
+                        origin: "59.9",
+                        soldnum: "397",
+                    },
+                    {
+                        slogan: "107",
+                        pic: "img/Spec/Spec_SpecialOfffer_01.jpg",
+                        desc: "修正维生素",
+                        discount: "26.9",
+                        origin: "59.9",
+                        soldnum: "397",
+                    },
+                ]
+            },
+
+        ],
+    LightningBuy:{
+        col1Logo:"img/Spec/LightningBuy/LightningBuy_col1_logo01.png",
+        col1Name:"男士护肤热卖专场",
+        col1Number:"2",
+        col1Pic:"img/Spec/LightningBuy/LightningBuy_col1_pic01.jpg",
+        col2List:[
+            {
+                col2Logo:"img/Spec/LightningBuy/LightningBuy_col2_logo01.png",
+                col2Name:"苏泊尔清凉节专场"
+            },
+        ]
+    }       
+    
   },
   mutations: {
 
