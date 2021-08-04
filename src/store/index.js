@@ -424,7 +424,19 @@ export default new Vuex.Store({
             {
                 tit:"多",
                 txt:"品类齐全，轻松购物"
-            }
+            },
+            {
+                tit:"多",
+                txt:"品类齐全，轻松购物"
+            },
+            {
+                tit:"多",
+                txt:"品类齐全，轻松购物"
+            },
+            {
+                tit:"多",
+                txt:"品类齐全，轻松购物"
+            },
         ],
         footerHelp:[
             {
@@ -433,11 +445,40 @@ export default new Vuex.Store({
                     {
                         link:"#",
                         txt:"购物流程"
+                    },
+                    {
+                        link:"#",
+                        txt:"购物流程"
+                    }
+                ]
+            },
+            {
+                tit:"购物指南",
+                con:[
+                    {
+                        link:"#",
+                        txt:"购物流程"
+                    },
+                    {
+                        link:"#",
+                        txt:"购物流程"
                     }
                 ]
             }
         ],
         footerCopyright:[
+            {
+                link:'#',
+                txt:"关于我们"
+            },
+            {
+                link:'#',
+                txt:"关于我们"
+            },
+            {
+                link:'#',
+                txt:"关于我们"
+            },
             {
                 link:'#',
                 txt:"关于我们"
@@ -705,7 +746,7 @@ export default new Vuex.Store({
                 ]
             },
 
-        ],
+    ],//每日低价
     LightningBuy:{
         col1Logo:"img/Spec/LightningBuy/LightningBuy_col1_logo01.png",
         col1Name:"男士护肤热卖专场",
@@ -716,9 +757,218 @@ export default new Vuex.Store({
                 col2Logo:"img/Spec/LightningBuy/LightningBuy_col2_logo01.png",
                 col2Name:"苏泊尔清凉节专场"
             },
+            {
+                col2Logo:"img/Spec/LightningBuy/LightningBuy_col2_logo01.png",
+                col2Name:"苏泊尔清凉节专场"
+            },
+            {
+                col2Logo:"img/Spec/LightningBuy/LightningBuy_col2_logo01.png",
+                col2Name:"苏泊尔清凉节专场"
+            },
+            {
+                col2Logo:"img/Spec/LightningBuy/LightningBuy_col2_logo01.png",
+                col2Name:"苏泊尔清凉节专场"
+            },
+            {
+                col2Logo:"img/Spec/LightningBuy/LightningBuy_col2_logo01.png",
+                col2Name:"苏泊尔清凉节专场"
+            },
+            {
+                col2Logo:"img/Spec/LightningBuy/LightningBuy_col2_logo01.png",
+                col2Name:"苏泊尔清凉节专场"
+            },
         ]
-    }       
-    
+    },//品牌闪购
+    Channel:{
+        col1:[
+            {
+                img:"img/Cannel/channel_col1_01.jpg"
+            },
+            {
+                img:"img/Cannel/channel_col1_01.jpg"
+            },
+        ],
+        col2:[
+            {
+                name:"京东京造",
+                desc:"京东自有品牌",
+                pics:[
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    },
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    }
+                ]
+            },
+            {
+                name:"京东京造",
+                desc:"京东自有品牌",
+                pics:[
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    },
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    }
+                ]
+            },
+            {
+                name:"京东京造",
+                desc:"京东自有品牌",
+                pics:[
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    },
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    }
+                ]
+            },
+            {
+                name:"京东京造",
+                desc:"京东自有品牌",
+                pics:[
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    },
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    }
+                ]
+            },
+            {
+                name:"京东京造",
+                desc:"京东自有品牌",
+                pics:[
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    },
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    }
+                ]
+            },
+            {
+                name:"京东京造",
+                desc:"京东自有品牌",
+                pics:[
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    },
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    }
+                ]
+            },
+            {
+                name:"京东京造",
+                desc:"京东自有品牌",
+                pics:[
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    },
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    }
+                ]
+            },
+            {
+                name:"京东京造",
+                desc:"京东自有品牌",
+                pics:[
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    },
+                    {
+                        img:"img/Cannel/channel_col2_01.jpg"
+                    }
+                ]
+            },
+        ]
+    },//频道广场
+    feeds:{
+        tag:[
+            {
+                name:"精选",
+                desc:"猜你喜欢"
+            },
+            {
+                name:"智能先锋",
+                desc:"猜你喜欢"
+            },
+            {
+                name:"智能先锋",
+                desc:"猜你喜欢"
+            },
+            {
+                name:"智能先锋",
+                desc:"猜你喜欢"
+            },
+            {
+                name:"智能先锋",
+                desc:"猜你喜欢"
+            },
+            {
+                name:"智能先锋",
+                desc:"猜你喜欢"
+            },
+        ],
+        inner:[
+            {
+                name:"精选",
+                list:[
+                    {
+                        pic:"img/Feeds/feeds_inner_col_01.png",
+                        desc:"SOULTOTO日本智能马桶一体机全自动翻盖坐便器即热式冲洗无水压限制智能座便器 S-9918【自动翻盖】+语音控制+泡沫盾 250/300/350/400坑距 下单备注",
+                        priceTxt:"58",
+                        priceTxtDecimal:"00"
+                    },
+                    {
+                        pic:"img/Feeds/feeds_inner_col_01.png",
+                        desc:"阿诺顿",
+                        priceTxt:"58",
+                        priceTxtDecimal:"00"
+                    },
+                    {
+                        pic:"img/Feeds/feeds_inner_col_01.png",
+                        desc:"阿诺顿",
+                        priceTxt:"58",
+                        priceTxtDecimal:"00"
+                    },
+                    {
+                        pic:"img/Feeds/feeds_inner_col_01.png",
+                        desc:"阿诺顿",
+                        priceTxt:"58",
+                        priceTxtDecimal:"00"
+                    },
+                    {
+                        pic:"img/Feeds/feeds_inner_col_01.png",
+                        desc:"阿诺顿",
+                        priceTxt:"58",
+                        priceTxtDecimal:"00"
+                    },
+                    {
+                        pic:"img/Feeds/feeds_inner_col_01.png",
+                        desc:"阿诺顿",
+                        priceTxt:"58",
+                        priceTxtDecimal:"00"
+                    },
+                ]
+            },
+            {
+                name:"智能先锋",
+                list:[
+                    {
+                        pic:"img/Feeds/feeds_inner_col_01.png",
+                        desc:"阿诺顿",
+                        priceTxt:"58",
+                        priceTxtDecimal:"00"
+                    }
+                ]
+            }
+        ]
+    },//为你推荐       
   },
   mutations: {
 

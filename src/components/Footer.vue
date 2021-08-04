@@ -67,7 +67,7 @@ export default {
                 height: 42px;
                 .service_item{
                     float: left;
-                    width: 297px;
+                    width: 180px;
                     position: relative;
                     margin: 0 36px;
                     padding-left: 45px;
@@ -134,10 +134,19 @@ export default {
             padding: 15px 0;
             border-top: 1px solid #e1e1e1;
             text-align: center;
-            .copyright_split{
-                margin: 0 10px;
-                color: #ccc;
+            .copyright_links{
+                display: inline-block;
+                .copyright_split{
+                    margin: 0 10px;
+                    color: #ccc;
+                }
+                &:last-child{
+                    .copyright_split{
+                        display: none;
+                    }
+                }
             }
+
         }
         .sm_footer_ccopyright{
             width: 990px;

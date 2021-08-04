@@ -5,7 +5,10 @@
     <First :browserWidth="this.fixedBrowserWidth"></First>
     <Seckill></Seckill>
     <Spec></Spec>
+    <Channel></Channel>
+    <Feeds></Feeds>
     <Footer :browserWidth="this.fixedBrowserWidth"></Footer>
+    <div>1</div>
   </div>
 </template>
 
@@ -17,6 +20,8 @@ import First from '@/components/First.vue'
 import Footer from '@/components/Footer.vue'
 import Seckill from '@/components/Seckill.vue'
 import Spec from '@/components/Spec.vue'
+import Channel from '@/components/Channel.vue'
+import Feeds from '@/components/Feeds.vue'
 
 export default {
   name: 'home',
@@ -26,7 +31,9 @@ export default {
     First,
     Footer,
     Seckill,
-    Spec
+    Spec,
+    Channel,
+    Feeds
   },
   data(){
     return{

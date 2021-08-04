@@ -10,7 +10,7 @@
                 <LightningBuy></LightningBuy>
             </div>
         </div>
-        <div class="nicegoods">
+        <!-- <div class="nicegoods">
               <div class="nicegoods_logo">
                 <a class="logo_container">
                     <div class="logo_title">
@@ -44,7 +44,7 @@
                       <CoreTitle title="领卷中心"></CoreTitle>
                       <LBCoupon></LBCoupon>
                   </div>
-          </div>
+          </div> -->
       
 
   </div>
@@ -77,7 +77,6 @@ export default {
     },
     data(){
         return{
-            // smMode:false
         }
     },
     computed:{
