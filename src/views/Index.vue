@@ -5,23 +5,26 @@
     <First :browserWidth="this.fixedBrowserWidth"></First>
     <Seckill></Seckill>
     <Spec></Spec>
-    <Channel></Channel>
-    <Feeds></Feeds>
+    <div v-for="(item,i) in loadlNameList" :key="i">
+      <!-- {{item}} -->
+      <component :is="item"></component>
+    </div>
+    <div ref="loadingAnimation">
+      <!-- <div ref="$ChannelSkeleton"  :style="channelSkeleton"></div> -->
+    </div>
+    <!-- <Feeds ref="Feeds"
+          :style="FeedsStyle"></Feeds> -->
     <Footer :browserWidth="this.fixedBrowserWidth"></Footer>
-    <div>1</div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import Navigation from '@/components/Navigation.vue'
 import Header from '@/components/Header.vue'
 import First from '@/components/First.vue'
 import Footer from '@/components/Footer.vue'
 import Seckill from '@/components/Seckill.vue'
 import Spec from '@/components/Spec.vue'
-import Channel from '@/components/Channel.vue'
-import Feeds from '@/components/Feeds.vue'
 
 export default {
   name: 'home',
@@ -32,13 +35,19 @@ export default {
     Footer,
     Seckill,
     Spec,
-    Channel,
-    Feeds
+    Channel: resolve => require(['@/components/Channel.vue'], resolve),
+    Feeds: resolve => require(['@/components/Feeds.vue'], resolve),
   },
   data(){
     return{
       browserWidth:1330,//浏览器宽度
       fixedBrowserWidth:0,//性能优化
+      loadlNameList:[],
+      ReadyloadlNameList:["Channel","Feeds"],
+      loadingAnimation:{
+        width:'1190px',
+        height:'10px'
+      },
     }
   },
   computed: {
@@ -61,10 +70,39 @@ export default {
       }
     },//获取浏览器宽度
   },
+
   methods:{
     getbrowserwidth(){
       this.fixedBrowserWidth=Number(this.browserWidth);
-    }
+    },
+    scrollIndex() {
+      if(this.ReadyloadlNameList.length>0){
+        const { loadingAnimation} = this.$refs
+        // const { $ChannelSkeleton,$Channel,Feeds} = this.$refs
+        // const { channelSkeleton,channelStyle,boxStyle } = this
+        const offset = loadingAnimation.getBoundingClientRect();
+        const offsetTop = offset.top;
+        const offsetBottom = offset.bottom;
+        // const offsetHeight = offset.height;
+        if (offsetTop <= window.innerHeight && offsetBottom >= 0) {
+          console.log("splice")
+          this.loadlNameList=this.loadlNameList.concat(this.ReadyloadlNameList.splice(0,1))
+        } else {
+
+        }
+      }
+    },
+    throttle(func, delay) {            
+      var timer = null;            
+      return function() {                                         
+        if (!timer) {                    
+            timer = setTimeout(() =>{                         
+                func();                   
+                timer = null;                    
+            }, delay);                
+        }            
+      }        
+    }     
   },
   created() {
     this.fixedBrowserWidth=document.documentElement.clientWidth;
@@ -76,9 +114,11 @@ export default {
           _this.browserWidth= `${document.documentElement.clientWidth}`;
       })();
     };
+    window.addEventListener("scroll", this.throttle(this.scrollIndex,1000), true);
   },
   destroyed(){
     window.onresize = null;
+    window.removeEventListener('scroll', this.throttle(this.scrollIndex,1000), true);
   }
 }
 </script>

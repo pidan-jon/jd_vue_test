@@ -76,6 +76,7 @@ name:"Stickybox",
       const { $box, } = this.$refs
       const { contentStyle,boxStyle } = this
       const boxTop = $box.getBoundingClientRect().top
+      // console.log( $box.getBoundingClientRect())
       if (this.top !== 'unset') {
         if (boxTop > parseInt(this.top) && this.isFixedY) {
           this.isFixedY = false
