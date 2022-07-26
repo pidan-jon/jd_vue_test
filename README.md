@@ -1,12 +1,12 @@
 ### 基于vue的商城站点
 ### 技术栈
-##前端
+## 前端
 -vue
 -vue-cli
 -vuex
 -vue.router
 -less
-##后端
+## 后端
 -koa
 -mysql
 ### 网页预览
