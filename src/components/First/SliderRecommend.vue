@@ -80,7 +80,7 @@ export default {
 <style lang="less">
     @import "http://at.alicdn.com/t/font_2663232_sbvr8ri2rxq.css";
 </style>
-<style lang="less" scoped>
+<style lang="less">
     #SliderRecommendRoot{
         width: 190px;
         overflow: hidden;
@@ -147,10 +147,8 @@ export default {
             transition: background-color .2s ease;
             cursor: pointer;
             i{
-                position: relative;
                 display: block;
-                width: 100%;
-                height: 100%;
+                font-size: 26px;
                 color: #fff;
                 color: rgba(255,255,255,.8);
                 -webkit-transition: color .2s ease;
@@ -162,7 +160,7 @@ export default {
             border-top-right-radius: 18px;
             border-bottom-right-radius: 18px;
             i{
-                left: 4px;
+                transform: rotate(-90deg);
             }
         }
         .slider_control_next{
@@ -170,7 +168,7 @@ export default {
             border-top-left-radius: 18px;
             border-bottom-left-radius: 18px;
             i{
-                right: -6px;
+                transform: rotate(90deg);
             }
         }
         .focusmain{

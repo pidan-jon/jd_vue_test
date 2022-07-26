@@ -144,7 +144,7 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
         #seckillroot{
             width: 1190px;
             height: 260px;
@@ -236,6 +236,7 @@ export default {
                         border-top-left-radius: 18px;
                         border-bottom-left-radius: 18px;
                         i{
+                            transform: rotate(90deg);
                             right: 6px;
                             position: absolute;
 
@@ -246,6 +247,7 @@ export default {
                         border-top-right-radius: 18px;
                         border-bottom-right-radius: 18px;
                         i{
+                            transform: rotate(-90deg);
                             position: absolute;
                             left: 4px;
                         }

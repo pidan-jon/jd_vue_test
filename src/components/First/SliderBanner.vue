@@ -215,11 +215,11 @@ export default {
     }
     .arrow {
         position: absolute;
-        top: 35%;
-        color: rgba(204, 203, 203, 0.959);
+        top: 40%;
+        color: #fff;
         padding:0px 14px;
         border-radius: 50%;
-        font-size: 50px;
+        font-size: 46px;
         z-index: 2;
         display: block;
     }
