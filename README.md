@@ -2,7 +2,6 @@
 ### 技术栈
 #### 前端
 -vue
--vue-cli
 -vuex
 -vue.router
 -less
